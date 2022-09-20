@@ -4,36 +4,26 @@
 
 ### Author: Hayden Cleaver
 
-- [tests report](https://github.com/codefellows/code-401-javascript-example-lab/actions)
-- [front-end](https://code-401-js-lab-example.herokuapp.com/status)
-
+- [tests report](https://github.com/HaydenCleaver/server-deployment-practice/actions)
+- [heroku-prod](https://hayden-server-deploy-prod.herokuapp.com/)
 ### Setup
 
 #### `.env` requirements
 
-- `PORT` - Port Number
+- `PORT` - 3002
 
 #### Running the app
 
 - `npm start`
-- Endpoint: `/status`
-  - Returns Object
-
-    ```javascript
-    {
-      "domain": "john-api-server.demo.herokuapp.com",
-      "status": "running",
-      "port": 42123
-    }
-    ```
+- Endpoint: `/`
+  - Returns 'Hello World'
 
 #### Tests
 
 - Unit Tests: `npm run test`
-- Lint Tests: `npm run lint`
 
 #### UML
 
-(Created with [diagrams](https://app.diagrams.net/))
+(Created with [lucid-chart](https://www.lucidchart.com/blog/types-of-UML-diagrams))
 
-![UML Diagram](uml.png)
+![UML Diagram](UML.png)
