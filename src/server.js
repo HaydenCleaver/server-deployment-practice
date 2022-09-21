@@ -5,7 +5,7 @@ const notFound = require('./error-handlers/404');
 const errorHandler = require('./error-handlers/500');
 const stamper = require('./middleware/stamper');
 
-const PORT = process.eventNames.PORT || 3002;
+const PORT = process.env.PORT || 3002;
 
 const app = express();
 
