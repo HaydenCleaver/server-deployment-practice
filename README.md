@@ -5,7 +5,7 @@
 ### Author: Hayden Cleaver
 
 - [tests report](https://github.com/HaydenCleaver/server-deployment-practice/actions)
-- [heroku-dev](https://dashboard.heroku.com/apps/hayden-server-deploy-dev)
+- [heroku-dev](https://hayden-server-deploy-dev.herokuapp.com/)
 - [heroku-main](https://hayden-server-deploy-prod.herokuapp.com/)
 ### Setup
 
