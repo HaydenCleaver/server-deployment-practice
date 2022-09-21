@@ -22,15 +22,15 @@ describe('API Server', () => {
     expect(response.text).toEqual('Hello World');
   });
 
-//   test('handles \'/pet\' route without query param correctly', async () => {
-//     const response = await request.get('/pet');
-//     expect(response.text).toEqual('What a great animal companion');
+  test('handles \'/pet\' route without query param correctly', async () => {
+    const response = await request.get('/pet');
+    expect(response.text).toEqual('What a great animal companion');
 
-//   });
+  });
 
-//   it('handles \'/pet\' route with query param correctly', async () => {
-//     const response = await request.get('/pet&petName=Miji');
-//     expect(response.text).toEqual('Miji is awesome');
+  test('handles \'/pet\' route with query param correctly', async () => {
+    const response = await request.get('/pet?petName=Miji');
+    expect(response.text).toEqual('Miji is awesome');
 
-//   });
+  });
 });

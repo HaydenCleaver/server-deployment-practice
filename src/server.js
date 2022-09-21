@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3002;
 
 const app = express();
 
-// app.use(stamper);
+app.use(stamper);
 
 // app.use(anotherLogger);
 
@@ -28,40 +28,41 @@ const app = express();
 //     next();
 // }
 app.get('/', (req, res, next) => {
-    res.status(200).send('Hello World');
+  res.status(200).send('Hello World');
 });
 
 app.get('/bad', (req, res, next) => {
-    next('this is a bad route');
+  next('this is a bad route');
 });
 
-// app.get('/pet', (req, res, next) => {
-//     let petName = req.query;
-//     console.log('petName', petName);
+app.get('/pet', (req, res, next) => {
+  let { petName } = req.query;
+  console.log('petName', petName);
 
-//     try {
+  try {
 
-//         if (petName){
+    if (petName){
 
-//             res.status(200).send(`${petName} is awesome`);
+      res.status(200).send(`${petName} is awesome`);
 
-//         } else {
+    } else {
 
-//             res.status(200).send('this works');
-//         }
+      res.status(200).send('What a great animal companion');
+    }
 
-//     } catch(err){
+  } catch(err){
 
-//         next(err.message);
-//     }
+    next(err.message);
+  }
 
-// });
+});
+
 app.use('*', notFound);
 
 app.use(errorHandler);
 
 function start(){
-    app.listen(PORT, () => console.log(`listening on port ${PORT}`));
+  app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 }
 
 module.exports = { app, start};
